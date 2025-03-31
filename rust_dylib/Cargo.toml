@@ -1,0 +1,15 @@
+[package]
+name = "rust_dylib"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "z"         # 為了大小而非速度最佳化
+lto = true              # 啟用 link-time optimization
+debug = false           # 去除 debug 資訊
+strip = "symbols" 
+
+[dependencies] 

@@ -1,0 +1,10 @@
+[package]
+name = "wasm_runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasmtime = "14.0.4"
+anyhow = "1.0"
+mlua = { version = "0.9", features = ["luajit", "vendored"] } 
+libloading = "0.8"
